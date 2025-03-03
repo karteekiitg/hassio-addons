@@ -1,0 +1,12 @@
+configuration:
+  FILEN_EMAIL:
+    name: Filen Login Email
+  FILEN_PASSWORD:
+    name: Filen Login Password
+  FILEN_2FA_CODE:
+    name: Filen 2FA Code
+    description: Leave blank if 2fa is not enabled.
+  WEBDAV_USERNAME:
+    name: WebDAV Username
+  WEBDAV_PASSWORD:
+    name: WebDAV Password

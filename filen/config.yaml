@@ -1,0 +1,21 @@
+# https://developers.home-assistant.io/docs/add-ons/configuration#add-on-config
+name: Filen add-on
+version: "0.0.29"
+slug: filen
+description: Filen add-on
+url: "https://github.com/karteekiitg/hassio-addons/tree/main/filen"
+arch:
+  - armhf
+  - armv7
+  - aarch64
+  - amd64
+  - i386
+init: false
+schema:
+  FILEN_EMAIL: str
+  FILEN_PASSWORD: str
+  FILEN_2FA_CODE: "str?"
+  WEBDAV_USERNAME: str
+  WEBDAV_PASSWORD: str
+ports:
+  80/tcp: 12321
