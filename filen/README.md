@@ -2,8 +2,8 @@
 
 ## About
 
-[filen](https://filen.io/) is an encrypted cloud storage service with generous free tier and resonable pricing.
-This addon is based on the github [releases] (https://github.com/FilenCloudDienste/filen-cli/releases/)
+Filen is an encrypted cloud storage service with generous free tier and resonable pricing.
+This addon is based on the github [releases](https://github.com/FilenCloudDienste/filen-cli/releases/)
 
 ## Prerequisites
 
@@ -13,7 +13,7 @@ It provides free a free storage of 10GB (20GB if you go through a referral link)
 and 10GB per referral upto another 30GB. Sign up using my referral link at
 the following URL:
 
-<https://filen.io/r/46fa0f03b4a5d591817a8b708f0121c8>
+[filen](https://filen.io/r/46fa0f03b4a5d591817a8b708f0121c8)
 
 ## Installation
 
@@ -31,9 +31,11 @@ the following URL:
 ## Configuration
 
 ```yaml
-username: "your username"
-password: "your password"
-2fa: "your 2fa"
+FILEN_EMAIL: "Your Filen Username"
+FILEN_PASSWORD: "Your Filen Password"
+FILEN_2FA_CODE: "Your Filen 2fa (if 2fa is enabled)"
+WEBDAV_USERNAME: "Webdav Username"
+WEBDAV_PASSWORD: "Webdav Password"
 ```
 
 ## Support

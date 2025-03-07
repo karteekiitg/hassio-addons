@@ -9,10 +9,13 @@ FILEN_EMAIL=$(jq --raw-output '.FILEN_EMAIL // empty' $CONFIG_PATH)
 FILEN_PASSWORD=$(jq --raw-output '.FILEN_PASSWORD // empty' $CONFIG_PATH)
 FILEN_2FA_CODE=$(jq --raw-output '.FILEN_2FA_CODE // empty' $CONFIG_PATH)
 
-echo "${WEBDAV_USERNAME}"
-echo "${WEBDAV_PASSWORD}"
-echo "${FILEN_EMAIL}"
-echo "${FILEN_PASSWORD}"
-echo "${FILEN_2FA_CODE}"
+echo "Filen Email: ${FILEN_EMAIL}"
+echo "WebDAV Username: ${WEBDAV_USERNAME}"
 
-node filen.js webdav --email $FILEN_EMAIL --password $FILEN_PASSWORD --two-factor-code $FILEN_2FA_CODE --data-dir /addon_config/ --w-https --w-user $WEBDAV_USERNAME --w-password $WEBDAV_PASSWORD
+if [ -z "${FILEN_2FA_CODE}" ]
+    echo "2FA empty"
+    node filen.js webdav --email $FILEN_EMAIL --password $FILEN_PASSWORD --data-dir /addon_config/ --w-https --w-user $WEBDAV_USERNAME --w-password $WEBDAV_PASSWORD
+else
+    echo "2FA provided"
+    node filen.js webdav --email $FILEN_EMAIL --password $FILEN_PASSWORD --two-factor-code $FILEN_2FA_CODE --data-dir /addon_config/ --w-https --w-user $WEBDAV_USERNAME --w-password $WEBDAV_PASSWORD
+fi
