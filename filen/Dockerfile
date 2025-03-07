@@ -34,4 +34,4 @@ WORKDIR /filen-cli
 ENTRYPOINT ["tini", "--"]
 
 # Run Filen through the copied run.sh script
-CMD ["/run.sh"]
+CMD ["bash /run.sh"]
