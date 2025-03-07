@@ -1,5 +1,8 @@
 FROM filen/cli:v0.0.29
 
+# Copy root filesystem
+COPY rootfs /
+
 # Install bash
 RUN apk add --no-cache bash
 
