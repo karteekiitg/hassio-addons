@@ -6,8 +6,8 @@ RUN apk add --no-cache bash
 # Install curl
 RUN apk add --no-cache curl
 
-# Set shell
-SHELL ["/bin/ash", "-o", "pipefail", "-c"]
+# Install jq
+RUN apk add --no-cache jq
 
 # Install Tini to manage processes
 RUN apk add --no-cache tini
