@@ -1,11 +1,4 @@
-ARG BUILD_FROM
-FROM $BUILD_FROM
-
-# Install NodeJS
-RUN apk add --update nodejs-current npm
-
-# Install Filen
-RUN npm install -g @filen/cli@0.0.29
+FROM filen/cli:v0.0.29
 
 # Install Tini to manage processes
 RUN apk add --no-cache tini
@@ -14,8 +7,10 @@ RUN apk add --no-cache tini
 COPY run.sh /run.sh
 RUN chmod +x /run.sh
 
+WORKDIR /filen-cli
+
 # Use Tini as the entrypoint to handle processes
 ENTRYPOINT ["tini", "--"]
 
-# Run Stirling-PDF through the copied run.sh script
+# Run Filen through the copied run.sh script
 CMD ["/run.sh"]
