@@ -15,7 +15,7 @@ schema:
   WEBDAV_USERNAME: str
   WEBDAV_PASSWORD: str
 ports:
-  80/tcp: 22288
+  443/tcp: 22288
 map:
   - type: addon_config
     read_only: False
