@@ -14,7 +14,7 @@ echo "WebDAV Username: ${WEBDAV_USERNAME}"
 
 if [ -z "${FILEN_2FA_CODE}" ]; then
     echo "2FA empty"
-    node filen.js webdav --email $FILEN_EMAIL --password $FILEN_PASSWORD --data-dir /addon_config/ --w-https --w-user $WEBDAV_USERNAME --w-password $WEBDAV_PASSWORD
+    node filen.js webdav --email $FILEN_EMAIL --password $FILEN_PASSWORD --data-dir /config/ --w-https --w-user $WEBDAV_USERNAME --w-password $WEBDAV_PASSWORD
 else
     echo "2FA provided"
     node filen.js webdav --email $FILEN_EMAIL --password $FILEN_PASSWORD --two-factor-code $FILEN_2FA_CODE --data-dir /addon_config/ --w-https --w-user $WEBDAV_USERNAME --w-password $WEBDAV_PASSWORD
