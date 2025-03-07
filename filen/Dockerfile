@@ -3,13 +3,15 @@ FROM filen/cli:v0.0.29
 # Install bash
 RUN apk add --no-cache bash
 
+# Install curl
+RUN apk add --no-cache curl
+
 # Set shell
 SHELL ["/bin/ash", "-o", "pipefail", "-c"]
 
 # Install bashio
 ARG BASHIO_VERSION="v0.16.3"
-RUN set -o pipefail
-    && curl -J -L -o /tmp/bashio.tar.gz \
+RUN curl -J -L -o /tmp/bashio.tar.gz \
         "https://github.com/hassio-addons/bashio/archive/${BASHIO_VERSION}.tar.gz" \
     && mkdir /tmp/bashio \
     && tar zxvf \
