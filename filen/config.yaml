@@ -1,6 +1,6 @@
 # https://developers.home-assistant.io/docs/add-ons/configuration#add-on-config
 name: Filen add-on
-version: "0.0.8"
+version: "0.0.9"
 slug: filen
 description: Filen add-on
 url: "https://github.com/karteekiitg/hassio-addons/tree/main/filen"
