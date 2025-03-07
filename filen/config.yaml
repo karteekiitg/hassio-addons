@@ -1,6 +1,6 @@
 # https://developers.home-assistant.io/docs/add-ons/configuration#add-on-config
 name: Filen
-version: "0.0.11"
+version: "0.0.12"
 slug: filen
 description: Filen WebDAV Server
 url: "https://github.com/karteekiitg/hassio-addons/tree/main/filen"

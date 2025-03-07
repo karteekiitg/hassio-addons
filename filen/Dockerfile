@@ -22,7 +22,7 @@ RUN chmod +x /run.sh
 WORKDIR /filen-cli
 
 # Health check
-HEALTHCHECK --start-period=10m --interval=10m \
+HEALTHCHECK --start-period=1m --interval=10m \
     CMD curl --fail http://127.0.0.1:46836 || exit 1
 
 # Use Tini as the entrypoint to handle processes
